@@ -1,7 +1,6 @@
 function decryptor(key, index, start, length) {
     const ivLength = 32;
     const encrypted = document.getElementById('encrypted').innerHTML.trim();
-    console.log('[Start / Length]', start+ivLength, length - (ivLength * index))
     console.log('PBKDF2 Generated Key', bufToHex(key));
     
     const ivToUser = encrypted.substr(start, ivLength);
